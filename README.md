@@ -201,7 +201,7 @@ sequenceDiagram
 
 5. イベント処理シーケンス
 
-​```mermaid
+```mermaid
 sequenceDiagram
     participant Client as クライアント
     participant JsonConfig as JsonConfig
@@ -210,24 +210,24 @@ sequenceDiagram
 
     Client->>JsonConfig: enableEventTriggering()
     JsonConfig->>JsonConfig: triggerEvents = true
-
+    
     Client->>JsonConfig: addJsonEventListener(listener)
     JsonConfig->>JsonConfig: eventListeners.add(listener)
-
+    
     Note over Client, JsonEventListener: JSON処理中
     AbstractJSON->>JsonConfig: isEventTriggeringEnabled()
     JsonConfig-->>AbstractJSON: true
-
+    
     AbstractJSON->>JsonConfig: getJsonEventListeners()
     JsonConfig-->>AbstractJSON: listeners
-
+    
     loop 各リスナーに対して
         AbstractJSON->>JsonEventListener: onObjectStart()
-        JsonEventListener-->>AbstractJSON:
+        JsonEventListener-->>AbstractJSON: 
         AbstractJSON->>JsonEventListener: onPropertySet(key, value, accumulated)
-        JsonEventListener-->>AbstractJSON:
+        JsonEventListener-->>AbstractJSON: 
         AbstractJSON->>JsonEventListener: onObjectEnd()
-        JsonEventListener-->>AbstractJSON:
+        JsonEventListener-->>AbstractJSON: 
     end
 ```
 
