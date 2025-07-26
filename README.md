@@ -300,7 +300,7 @@ sequenceDiagram
     XMLSerializer-->>Client: XML文字列
 ```
 
-8. XMLからJSONへの変換シーケンス
+7. XMLからJSONへの変換シーケンス
 ```mermaid
 sequenceDiagram
     participant Client as クライアント
@@ -411,7 +411,7 @@ sequenceDiagram
     XMLSerializer-->>Client: JSON
 ```
 
-9.  型ヒント処理の詳細シーケンス
+8.  型ヒント処理の詳細シーケンス
 ```mermaid
 sequenceDiagram
     participant XMLSerializer as XMLSerializer
@@ -459,7 +459,7 @@ sequenceDiagram
     end
 ```
 
-10. 名前空間処理のシーケンス
+9. 名前空間処理のシーケンス
 ```mermaid
 sequenceDiagram
     participant XMLSerializer as XMLSerializer
