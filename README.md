@@ -1,12 +1,12 @@
 # json-lib-2.4
 
-コアJSON型: JSONObject、JSONArray、JSONNullがJSONの基本型を表現
-設定管理: JsonConfigでシリアライゼーション/デシリアライゼーションの動作を制御
-プロセッサーシステム: カスタム変換ロジックを実装するための各種プロセッサー
-フィルターシステム: プロパティの除外や変換を制御するフィルター
-イベントシステム: シリアライゼーション過程でのイベント通知
-柔軟な変換: JavaオブジェクトとJSON間の双方向変換をサポート
-このライブラリは、JavaオブジェクトとJSON間の変換を非常に柔軟かつ設定可能な形で提供しています。
+コアJSON型: JSONObject、JSONArray、JSONNullがJSONの基本型を表現<br>
+設定管理: JsonConfigでシリアライゼーション/デシリアライゼーションの動作を制御<br>
+プロセッサーシステム: カスタム変換ロジックを実装するための各種プロセッサー<br>
+フィルターシステム: プロパティの除外や変換を制御するフィルター<br>
+イベントシステム: シリアライゼーション過程でのイベント通知<br>
+柔軟な変換: JavaオブジェクトとJSON間の双方向変換をサポート<br>
+このライブラリは、JavaオブジェクトとJSON間の変換を非常に柔軟かつ設定可能な形で提供しています。<br>
 
 ![主要クラス図](./主要クラス図.svg)
 
@@ -200,6 +200,7 @@ sequenceDiagram
 ```
 
 5. イベント処理シーケンス
+
 ​```mermaid
 sequenceDiagram
     participant Client as クライアント
@@ -222,11 +223,11 @@ sequenceDiagram
 
     loop 各リスナーに対して
         AbstractJSON->>JsonEventListener: onObjectStart()
-        JsonEventListener-->>AbstractJSON: 
+        JsonEventListener-->>AbstractJSON:
         AbstractJSON->>JsonEventListener: onPropertySet(key, value, accumulated)
-        JsonEventListener-->>AbstractJSON: 
+        JsonEventListener-->>AbstractJSON:
         AbstractJSON->>JsonEventListener: onObjectEnd()
-        JsonEventListener-->>AbstractJSON: 
+        JsonEventListener-->>AbstractJSON:
     end
 ```
 
